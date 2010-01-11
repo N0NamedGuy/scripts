@@ -25,8 +25,8 @@
 #DEFRADIO=m80           # Default radio station
 
 # Flags to pass to the player
-PLIFLAGS=-really-quiet  # These are passed BEFORE the URL
-PLPFLAHS= > /dev/null   # There are passed AFTER the URL
+PLBFLAGS=-really-quiet  # These are passed BEFORE the URL
+PLAFLAGS= > /dev/null   # There are passed AFTER the URL
 
 # The player to use
 PLAYER=mplayer
@@ -71,4 +71,4 @@ else
 
 fi
 
-exec $PLAYER $PLIFLAGS $URL $PLPFLAGS
+exec $PLAYER $PLBFLAGS $URL $PLAFLAGS
