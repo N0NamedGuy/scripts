@@ -25,11 +25,11 @@
 #DEFRADIO=m80           # Default radio station
 
 # Flags to pass to the player
-PLBFLAGS=-really-quiet  # These are passed BEFORE the URL
-PLAFLAGS= > /dev/null   # There are passed AFTER the URL
+if [ "$PLBFLAGS" = "" ]; then PLBFLAGS=-really-quiet; fi  # These are passed BEFORE the URL
+if [ "$PLAFLAGS" = "" ]; then PLAFLAGS= > /dev/null; fi   # There are passed AFTER the URL
 
 # The player to use
-PLAYER=mplayer
+if [ "$PLAYER" = "" ]; then PLAYER=mplayer; fi
 
 if [ "$1" != "" ]; then
     RADIO=$1
