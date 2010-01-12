@@ -50,6 +50,7 @@ elif [ "$RADIO" = "cidadefm" ]; then URL=http://195.23.102.196/cidadecbr20
 elif [ "$RADIO" = "comercial" ]; then URL=http://195.23.102.196/comercialcbr20
 elif [ "$RADIO" = "rfm" ]; then URL=http://stream2.rfm.pt/RFM
 elif [ "$RADIO" = "m80" ]; then URL=http://195.23.102.196/m80cbr20
+elif [ "$RADIO" = "marginal" ]; then URL=mms://stream.radio.com.pt/ROLI-ENC-499
 elif [ "$RADIO" = "mixfm" ]; then URL=http://195.23.102.196/mixcbr96
 elif [ "$RADIO" = "megafm" ]; then URL=http://stream2.mega.fm/MEGAFM
 elif [ "$RADIO" = "orbital" ]; then URL=mms://stream.radio.com.pt/ROLI-ENC-401
