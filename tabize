@@ -1,0 +1,4 @@
+#!/bin/bash
+
+FILE=$1
+cat $FILE | sed -e "s/	/    /g" > $FILE.tab
