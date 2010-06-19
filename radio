@@ -23,6 +23,7 @@
 # radio station to be played when this script
 # has no arguments.
 #DEFRADIO=m80           # Default radio station
+PLAYER=mplayer
 
 # Flags to pass to the player
 if [ "$PLBFLAGS" = "" ]; then PLBFLAGS=-really-quiet; fi  # These are passed BEFORE the URL

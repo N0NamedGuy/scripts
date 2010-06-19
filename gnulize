@@ -1,0 +1,40 @@
+#!/bin/bash
+# gnulize 
+# Copyright (C) 2010 David Serrano
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+# With this script you can add the gnu header to the specified file.
+# usage:
+# gnulize file_name
+
+FILE=$1
+COMMENT_BEGIN=//
+COMMENT_END=
+TMP_LIC=/tmp/GNU_LICENSE
+EXT=_gnu
+
+LICENSE="$COMMENT_BEGIN This program is free software: you can redistribute it and/or modify $COMMENT_END
+$COMMENT_BEGIN it under the terms of the GNU General Public License as published by $COMMENT_END
+$COMMENT_BEGIN the Free Software Foundation, either version 3 of the License, or $COMMENT_END
+$COMMENT_BEGIN (at your option) any later version. $COMMENT_END
+$COMMENT_BEGIN $COMMENT_END
+$COMMENT_BEGIN This program is distributed in the hope that it will be useful, $COMMENT_END
+$COMMENT_BEGIN but WITHOUT ANY WARRANTY; without even the implied warranty of $COMMENT_END
+$COMMENT_BEGIN MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the $COMMENT_END
+$COMMENT_BEGIN GNU General Public License for more details. $COMMENT_END"
+
+echo "$LICENSE" > $TMP_LIC
+cat $TMP_LIC file_name > file_name$EXT
+mv file_name$EXT file_name
